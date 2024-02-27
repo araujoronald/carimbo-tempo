@@ -30,7 +30,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	req.SetBasicAuth("[[AQUI-O-CPF]]", "[[AQUI-A-SENHA]]")
+	req.SetBasicAuth("85570540172", "serpro@123")
 	req.Header.Add("content-type", "application/timestamp-query")
 
 	tsr, err := client.Do(req)
@@ -47,17 +47,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(resp)
+	fmt.Println("Carimbo realizado com sucesso")
 	os.WriteFile("tsr_go", resp, 0777)
-
-	tsResp, err := timestamp.ParseResponse(resp)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	fmt.Println(tsResp.HashedMessage)
-	fmt.Println(tsResp.Policy)
-	for _, c := range tsResp.Certificates {
-		fmt.Println(c.Subject.Organization, c.Subject.OrganizationalUnit)
-	}
 }

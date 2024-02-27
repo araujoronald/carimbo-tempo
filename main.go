@@ -48,5 +48,5 @@ func main() {
 	}
 
 	fmt.Println("Carimbo realizado com sucesso")
-	os.WriteFile("tsr_go", resp, 0777)
+	os.WriteFile("tsr_go", resp, 0644)
 }

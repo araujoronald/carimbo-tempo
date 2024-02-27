@@ -30,7 +30,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	req.SetBasicAuth("85570540172", "serpro@123")
+	req.SetBasicAuth("[[CPF-AQUI]]", "[[SENHA-AQUI]]")
 	req.Header.Add("content-type", "application/timestamp-query")
 
 	tsr, err := client.Do(req)

@@ -1,0 +1,1 @@
+openssl ts -verify -in tsr_go -data go-data.txt -CAfile acfts-bundle.pem

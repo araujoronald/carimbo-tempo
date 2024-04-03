@@ -59,6 +59,5 @@ func main() {
 		fmt.Println("Carimbo realizado com sucesso", sumCarimbo)
 		fileResp := "tsr_go_" + strconv.Itoa(sumCarimbo)
 		os.WriteFile(fileResp, resp, 0644)
-
 	}
 }
